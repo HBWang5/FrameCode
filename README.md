@@ -112,7 +112,7 @@ ARouter 阿里路由
 │   ├──model_home                              项目主页模块   
 │   ├──model_login                             项目登录、注册模块   
 │   ├──model_live                              项目直播模块  
-│   ├──model_patriarch                         项目家长中心模块  
+│   ├──model_patriarch                         项目中心模块  
 │   ├──model_user                              项目个人信息、设置模块
 
      
