@@ -101,7 +101,7 @@ ARouter 阿里路由
 
 ### 目录介绍：
 **  
-├──IQBClassTeacher_Android                      项目总工程  
+├──FrameCode                                    项目总工程  
 │   ├──lib_api                                 项目主体框架lib  
 │   ├──lib_been                                项目实体类  
 │   ├──lib_constants                           项目常量  
