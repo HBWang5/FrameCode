@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="window_background_color">#40000000</color>
+
+    <color name="transparent_color">#0019252C</color>
+
+    <color name="yellow_color">#FFBA15</color>
+
+    <color name="white_color">#fff</color>
+
+    <color name="black_color">#80333333</color>
+
+    <color name="loading_dialog_color">#D8D8D8</color>
+
+    <color name="pro_msg_color">#DE2323</color>
+
+    <color name="pro_msg_green_color">#8BB73C</color>
+
+    <color name="edit_line_color">#EEEEEE</color>
+
+    <color name="colorPro">#C1C1C1</color>
+    <color name="colorProFull">#A6C1C1C1</color>
+    <color name="colorProBorder">#CCC1C1C1</color>
+    <color name="color_orange">#FD5E02</color>
+    <color name="color_red">#F8625A</color>
+    <color name="text_gray_color">#929292</color>
+
+    <color name="patriarch_teacher_title_tv">#333333</color>
+    <color name="patriarch_class_title_tv">#999999</color>
+
+    <color name="home_net_loading_one">#FFEBB1</color>
+    <color name="home_net_loading_two">#FFE8A6</color>
+    <color name="home_net_loading_three">#FEE28F</color>
+    <color name="home_net_loading_four">#FEDD79</color>
+    <color name="home_net_loading_five">#FED762</color>
+    <color name="home_net_loading_six">#FEC620</color>
+</resources>

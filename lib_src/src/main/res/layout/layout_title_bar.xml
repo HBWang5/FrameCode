@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:id="@+id/base_title_bar_group"
+    android:orientation="horizontal">
+
+    <com.iqb.src.widget.IQBRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <com.iqb.src.widget.IQBImageView
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/y30"
+            android:id="@+id/base_title_back_img_src"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:src="@mipmap/base_back" />
+
+        <com.iqb.src.widget.IQBImageView
+            android:id="@+id/base_title_back_img"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true" />
+
+        <com.iqb.src.widget.IQBTextView
+            android:id="@+id/title_bar_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/x35" />
+
+        <com.iqb.src.widget.IQBTextView
+            android:id="@+id/title_bar_submit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:gravity="center"
+            android:textSize="@dimen/x27"
+            tools:ignore="RtlHardcoded" />
+    </com.iqb.src.widget.IQBRelativeLayout>
+</com.iqb.src.widget.IQBLinearLayout>

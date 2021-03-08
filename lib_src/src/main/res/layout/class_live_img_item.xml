@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x200"
+    android:layout_height="@dimen/x200"
+    android:orientation="vertical">
+
+
+    <com.iqb.src.widget.IQBRoundImageView
+        android:id="@+id/class_prepare_item_img"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/y200"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/x24" />
+
+    <com.iqb.src.widget.IQBTextView
+        android:id="@+id/img_select_tv"
+        android:layout_width="@dimen/x36"
+        android:visibility="gone"
+        android:layout_height="@dimen/x36"
+        android:layout_alignEnd="@id/class_prepare_item_img"
+        android:layout_alignRight="@id/class_prepare_item_img"
+        android:layout_marginTop="@dimen/y12"
+        android:layout_marginEnd="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@drawable/live_delete_tag_icon"
+        android:gravity="center"
+        android:textColor="@color/white_color" />
+</com.iqb.src.widget.IQBRelativeLayout>

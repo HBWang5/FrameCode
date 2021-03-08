@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_glide" />
+
+    <item name="status_bar_util_fake_status_bar_view" type="id" />
+    <item name="status_bar_util_translucent_view" type="id" />
+
+    <item name="player_pause" type="id" />
+    <item name="pro_volume" type="id" />
+    <item name="pro_brightness" type="id" />
+    <item name="player_full" type="id" />
+
+    <item name="class_time_img" type="id"/>
+    <item name="class_stu_img" type="id" />
+    <item name="class_stu_two_img" type="id" />
+    <item name="class_stu_three_img" type="id" />
+    <item name="class_content_list" type="id" />
+    <item name="class_content_layout" type="id" />
+    <item name="class_content_img" type="id" />
+    <item name="back_live_img" type="id" />
+    <item name="down_up_img" type="id" />
+    <item name="loudspeaker_img" type="id" />
+    <item name="kill_stu_img" type="id" />
+    <item name="course_ware_img" type="id" />
+    <item name="return_split_win" type="id" />
+    <item name="microphone_img" type="id" />
+    <item name="leave_channel_img" type="id" />
+    <item name="students_layout" type="id" />
+    <item name="students_live_item" type="id" />
+    <item name="black_title_bar" type="id" />
+
+
+
+    <item name="config_setting" type="id"/>
+    <item name="password_setting" type="id"/>
+    <item name="reset_mes_setting" type="id"/>
+    <item name="privacy_setting" type="id"/>
+    <item name="user_agreement_setting" type="id"/>
+    <item name="versions_setting" type="id"/>
+    <item name="grade_setting" type="id"/>
+    <item name="out_login_setting" type="id"/>
+
+
+    <item name="staff_icon_img" type="id"/>
+    <item name="stand_up_img" type="id"/>
+
+</resources>

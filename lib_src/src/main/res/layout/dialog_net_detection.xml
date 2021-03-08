@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent_color"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/x560"
+        android:layout_height="@dimen/y736"
+        android:background="@drawable/base_shape_dialog_ios"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/y48"
+            android:gravity="center"
+            android:text="@string/home_dialog_net_detection_title"
+            android:textSize="@dimen/x30" />
+
+        <ImageView
+            android:id="@+id/net_detection_content_img"
+            android:layout_width="@dimen/x342"
+            android:layout_height="@dimen/y306"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/y32"
+            android:src="@drawable/home_network_pop_bg_one"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/net_content_tv"
+            android:layout_width="@dimen/x460"
+            android:layout_height="@dimen/y100"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/y12"
+            android:gravity="center"
+            android:text="@string/home_dialog_net_detection_content"
+            android:textSize="@dimen/x25" />
+
+        <com.iqb.src.widget.IQBLoadingPointView
+            android:id="@+id/id_loading_point_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <com.iqb.src.widget.IQBTextView
+            android:id="@+id/id_finish_view"
+            android:layout_width="@dimen/x488"
+            android:layout_height="@dimen/y100"
+            android:layout_gravity="center"
+            android:layout_marginTop="50px"
+            android:background="@drawable/shape_patriarch_unread_btn_select"
+            android:gravity="center"
+            android:text="@string/home_dialog_net_finish_tv"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/x35"
+            android:visibility="gone"
+            tools:ignore="PxUsage" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/net_detection_back_bt"
+        android:layout_width="@dimen/x44"
+        android:layout_height="@dimen/x44"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/y64"
+        android:src="@drawable/base_dialog_closed_icon"
+        tools:ignore="ContentDescription" />
+</LinearLayout>

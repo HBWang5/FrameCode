@@ -1,0 +1,21 @@
+ext {
+
+    version = [
+            versionName: "1.0.0",
+            versionCode: 1,
+    ]
+
+    envConfig = [
+            runEnv    : "\"uat\"",
+            appKey    : "\"\"",
+            secretKey : "\"\"",
+            baseUrl   : "\"http://192.168.8.220:8091/\"",
+            baseSocket: "\"http://192.168.8.220:10015/\"",
+            AgoraId   : "\"21c6fd39ea4f4d1fbe9d5aef50504589\"",
+    ]
+
+    platformKey = [
+    ]
+
+
+}

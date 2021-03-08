@@ -1,0 +1,87 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode rootProject.ext.version.versionCode as int
+        versionName rootProject.ext.version.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField "boolean", "ISDEBUG", "false"
+            buildConfigField("String", "BASE_URL", "${rootProject.ext.envConfig.baseUrl}")
+            buildConfigField("String", "BASE_SOCKET", "${rootProject.ext.envConfig.baseSocket}")
+            buildConfigField("String", "AGORA_ID", "${rootProject.ext.envConfig.AgoraId}")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField "boolean", "ISDEBUG", "true"
+            buildConfigField("String", "BASE_URL", "${rootProject.ext.envConfig.baseUrl}")
+            buildConfigField("String", "BASE_SOCKET", "${rootProject.ext.envConfig.baseSocket}")
+            buildConfigField("String", "AGORA_ID", "${rootProject.ext.envConfig.AgoraId}")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api project(path: ':lib_been')
+    api project(path: ':lib_constants')
+    api project(path: ':lib_src')
+    api project(path: ':lib_socket')
+
+    api rootProject.ext.dependencies.dagger
+    api rootProject.ext.dependencies.dagger_android
+    api rootProject.ext.dependencies.dagger_android_support
+    annotationProcessor rootProject.ext.dependencies.dagger_android_processor
+    annotationProcessor rootProject.ext.dependencies.dagger_compiler
+
+    api rootProject.ext.dependencies.eventbus
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.retrofit_gson
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.easypermissions
+    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxjava2Android
+    api rootProject.ext.dependencies.okhttp3LoggingInterceptor
+    api rootProject.ext.dependencies.retrofitAdapterRxjava2
+    api rootProject.ext.dependencies.autodispose
+    api rootProject.ext.dependencies.butterknife
+    annotationProcessor rootProject.ext.dependencies.butterknifeCompiler
+    api rootProject.ext.dependencies.ucrop
+    api rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+    api rootProject.ext.dependencies.glideOkhttp3Integration
+    api rootProject.ext.dependencies.arouter
+    annotationProcessor rootProject.ext.dependencies.arouter_compiler
+    api rootProject.ext.dependencies.zxingCore
+    api rootProject.ext.dependencies.zxingAndroidEmbedded
+    api rootProject.ext.dependencies.rxlifecycle
+    api rootProject.ext.dependencies.jsbridge
+}

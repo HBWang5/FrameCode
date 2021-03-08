@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent_color"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.iqb.src.widget.IQBLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.iqb.src.widget.IQBRoundImageView
+            android:id="@+id/dialog_player_select_icon"
+            android:layout_width="46dp"
+            android:layout_height="64dp"
+            android:layout_margin="20dp" />
+
+        <com.iqb.src.widget.IQBLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.iqb.src.widget.IQBTextView
+                android:id="@+id/dialog_player_select_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="基础乐理-1"
+                android:textColor="#454545"
+                android:textSize="@dimen/x27"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+            <com.iqb.src.widget.IQBTextView
+                android:id="@+id/dialog_player_select_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="2.5M 1天前"
+                tools:ignore="HardcodedText" />
+
+        </com.iqb.src.widget.IQBLinearLayout>
+
+        <com.iqb.src.widget.IQBRoundImageView
+            android:id="@+id/dialog_player_select_sign"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="20dp" />
+
+    </com.iqb.src.widget.IQBLinearLayout>
+
+</com.iqb.src.widget.IQBLinearLayout>

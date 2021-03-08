@@ -1,0 +1,2 @@
+include ':model_bridge', ':model_class', ':model_login', ':model_patriarch', ':model_users', ':lib_api', ':lib_been', ':lib_src', ':lib_constants', ':lib_socket', ':lib_player'
+rootProject.name='FrameCode'

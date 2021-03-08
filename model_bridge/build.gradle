@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+android {
+
+
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.iqb.classsteacher"
+
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode rootProject.ext.version.versionCode as int
+        versionName rootProject.ext.version.versionName
+        flavorDimensions rootProject.ext.version.versionName
+
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+        signingConfigs {
+            config {
+                storeFile file('iqb_student.jks')
+                storePassword "123456"
+                keyAlias "IQB_STUDENT"
+                keyPassword "123456"
+            }
+        }
+        sourceSets {
+            main {
+                if (isModel.toBoolean()) {
+                    manifest.srcFile 'src/main/buildModule/AndroidManifest.xml'
+                } else {
+                    manifest.srcFile 'src/main/buildApp/AndroidManifest.xml'
+                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.config
+            buildConfigField "boolean", "ISDEBUG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        channel_official { manifestPlaceholders = [CHANNEL_VALUE: "official"] }//投放官网
+        channel_yingyongbao { manifestPlaceholders = [CHANNEL_VALUE: "yingyongbao"] }
+        channel_360 { manifestPlaceholders = [CHANNEL_VALUE: "360"] }
+        channel_xiaomi { manifestPlaceholders = [CHANNEL_VALUE: "xiaomi"] }
+        channel_huawei { manifestPlaceholders = [CHANNEL_VALUE: "huawei"] }
+        channel_oppo { manifestPlaceholders = [CHANNEL_VALUE: "oppo"] }
+        channel_vivo { manifestPlaceholders = [CHANNEL_VALUE: "vivo"] }
+    }
+
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name == 'release') {
+                outputFileName = "iqb_v${defaultConfig.versionName}_${releaseTime()}" +
+                        "_${variant.productFlavors[0].name}_release.apk"
+            } else {
+                outputFileName = "iqb_v${defaultConfig.versionName}_${releaseTime()}" +
+                        "_${variant.productFlavors[0].name}_debug.apk"
+            }
+        }
+    }
+
+    lintOptions {
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds true
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+
+    }
+
+}
+
+static def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+:08:00"))
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    api project(':lib_api')
+
+    if (!isModel.toBoolean()) {
+        implementation project(path: ':model_login')
+        implementation project(path: ':model_class')
+        implementation project(path: ':model_patriarch')
+        implementation project(path: ':model_users')
+    }
+
+    annotationProcessor rootProject.ext.dependencies.dagger_android_processor
+    annotationProcessor rootProject.ext.dependencies.dagger_compiler
+    annotationProcessor rootProject.ext.dependencies.butterknifeCompiler
+    annotationProcessor rootProject.ext.dependencies.arouter_compiler
+}

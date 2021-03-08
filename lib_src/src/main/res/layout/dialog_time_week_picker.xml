@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_shape_dialog_ios"
+    android:orientation="vertical">
+
+    <com.iqb.src.widget.IQBLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.iqb.src.widget.IQBTextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x48"
+            android:layout_marginLeft="@dimen/x48"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/yellow_color"
+            android:textSize="@dimen/x27"
+            tools:ignore="HardcodedText" />
+
+        <com.iqb.src.widget.IQBTextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="生日"
+            android:textColor="#333333"
+            android:textSize="@dimen/x27"
+            tools:ignore="HardcodedText" />
+
+        <com.iqb.src.widget.IQBTextView
+            android:id="@+id/countersign_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x48"
+            android:layout_marginRight="@dimen/x48"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/yellow_color"
+            android:textSize="@dimen/x27"
+            tools:ignore="HardcodedText" />
+
+    </com.iqb.src.widget.IQBLinearLayout>
+
+    <com.iqb.src.widget.IQBLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y442"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/year_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/week_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_weight="2"
+            tools:ignore="RtlHardcoded" />
+
+    </com.iqb.src.widget.IQBLinearLayout>
+
+
+</com.iqb.src.widget.IQBLinearLayout>

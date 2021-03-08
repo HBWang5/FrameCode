@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:background="@drawable/base_shape_dialog_ios"
+    android:orientation="vertical">
+
+    <com.iqb.src.widget.IQBTextView
+        android:id="@+id/dialog_editor_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="请输入"
+        android:textSize="@dimen/x30"
+        tools:ignore="HardcodedText" />
+
+    <com.iqb.src.widget.IQBEditText
+        android:id="@+id/dialog_editor_data_ed"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/x27"
+        android:layout_weight="1"
+        android:background="@null" />
+
+    <com.iqb.src.widget.IQBTextView
+        android:id="@+id/dialog_editor_submit_tv"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/select_commit_bt"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white_color"
+        tools:ignore="HardcodedText" />
+</com.iqb.src.widget.IQBLinearLayout>

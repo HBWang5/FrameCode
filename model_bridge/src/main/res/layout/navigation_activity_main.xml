@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.iqb.src.widget.IQBImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/navigation_icon" />
+
+    <com.iqb.src.widget.IQBTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y526"
+        android:textSize="@dimen/x35" />
+
+    <com.iqb.src.widget.IQBTextView
+        android:id="@+id/versions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y50"
+        android:text="V0.0.1"
+        android:textSize="@dimen/x27"
+        tools:ignore="HardcodedText" />
+</com.iqb.src.widget.IQBLinearLayout>

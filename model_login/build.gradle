@@ -1,0 +1,69 @@
+if (isModel.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        if (isModel.toBoolean()) {
+            applicationId "com.iqb.login"
+        }
+
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode rootProject.ext.version.versionCode as int
+        versionName rootProject.ext.version.versionName
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+
+        sourceSets {
+            main {
+                if (!isModel.toBoolean()) {
+                    manifest.srcFile 'src/main/buildModule/AndroidManifest.xml'
+                } else {
+                    manifest.srcFile 'src/main/buildApp/AndroidManifest.xml'
+                }
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds true
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+
+    }
+}
+dependencies {
+
+    implementation project(':lib_api')
+    annotationProcessor rootProject.ext.dependencies.butterknifeCompiler
+    annotationProcessor rootProject.ext.dependencies.arouter_compiler
+}

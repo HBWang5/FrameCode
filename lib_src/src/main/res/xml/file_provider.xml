@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--
+        1、name对应的属性值，开发者可以自由定义；
+        2、path对应的属性值，当前external-path标签下的相对路径
+        比如：/storage/emulated/0/92Recycle-release.apk
+        相对路径：/
+        external-path代表外部存储区域的根目录下的文件
+        比如：DCIM/camerademo 表示Environment.getExternalStorageDirectory()目录下的/DCIM/camerademo目录
+        files-path代表app 私有的存储区域
+        比如：images表示Context.getFilesDir()目录下的images目录 /data/user/0/com.xx.xxx/files/images
+        cache-path代表app 私有的存储区域
+        比如：images表示Context.getCacheDir()目录下的images目录 /data/user/0/com.xx.xxx/cache/images
+        external-files-path代表app 外部存储区域根目录下的文件
+        比如：Pictures表示Context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+            目录mnt/sdcard/Android/data/< package name >/files/Pictures下的目录
+        external-cache-path代表app 外部存储区域根目录下的文件
+        比如：images表示Context.getExternalCacheDir目录下的images目录
+     -->
+    <external-path
+        name="iqb_image_path"
+        path="DCIM/IQBCLASS " />
+    <external-path
+        name="iqb_external_path"
+        path="." />
+    <root-path
+        name="root_path"
+        path="" />
+</paths>

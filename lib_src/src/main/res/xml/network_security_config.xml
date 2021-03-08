@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    /文档见：https://developer.android.com/training/articles/security-config?hl=zh-cn
+    //https://developer.android.com/reference/android/security/NetworkSecurityPolicy.html?hl=zh-cn#isCleartextTrafficPermitted()
+    //Android 7以上的默认配置，默认只信任系统证书/允许明文通信
+    //cleartextTrafficPermitted意思是允许明文通信，设置为false的话会在明文通信时退出app
+    //NOTE: WebView honors this flag for applications targeting API level 26 and up.
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

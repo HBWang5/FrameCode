@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iqb.src.widget.IQBLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x476"
+    android:layout_height="@dimen/y48"
+    android:background="@drawable/live_shape_msg_bg"
+    android:orientation="horizontal">
+
+
+    <com.iqb.src.widget.IQBPlayerImageView
+        android:id="@+id/live_msg_icon"
+        android:layout_width="@dimen/x100"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/y8" />
+
+    <com.iqb.src.widget.IQBTextView
+        android:id="@+id/live_msg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/white_color" />
+</com.iqb.src.widget.IQBLinearLayout>

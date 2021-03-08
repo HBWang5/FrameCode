@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode rootProject.ext.version.versionCode as int
+        versionName rootProject.ext.version.versionName
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.dependencies.rclayout
+    //#集成ijkplayer播放器
+    implementation rootProject.ext.dependencies.ijkplayer_java
+    implementation rootProject.ext.dependencies.ijkplayer_armv7a
+    //集成声网
+    implementation rootProject.ext.dependencies.rtc
+
+    implementation project(':lib_api')
+}
