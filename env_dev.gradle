@@ -9,9 +9,9 @@ ext {
             runEnv    : "\"dev\"",
             appKey    : "\"\"",
             secretKey : "\"\"",
-            baseUrl   : "\"http://192.168.8.8:80/\"",
-            baseSocket: "\"http://192.168.8.8:10015/\"",
-            AgoraId   : "\"04bd7ab941b44b41b0edc2bfb6d52f19\"",
+            baseUrl   : "\"\"",
+            baseSocket: "\/\"",
+            AgoraId   : "\"\"",
     ]
 
     platformKey = [
