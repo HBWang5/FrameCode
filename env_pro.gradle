@@ -9,9 +9,9 @@ ext {
             runEnv    : "\"product\"",
             appKey    : "\"\"",
             secretKey : "\"\"",
-            baseUrl   : "\"http://www.iqinban.com:80/\"",
-            baseSocket: "\"http://www.iqinban.com:10015/\"",
-            AgoraId   : "\"21c6fd39ea4f4d1fbe9d5aef50504589\"",
+            baseUrl   : "\"\"",
+            baseSocket: "\"\"",
+            AgoraId   : "\"\"",
     ]
 
     platformKey = [
