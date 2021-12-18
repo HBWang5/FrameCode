@@ -4,7 +4,7 @@ android {
 
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.iqb.classsteacher"
+        applicationId ""
 
         minSdkVersion 16
         targetSdkVersion 29
@@ -29,9 +29,9 @@ android {
         }
         signingConfigs {
             config {
-                storeFile file('iqb_student.jks')
+                storeFile file('.jks')
                 storePassword "123456"
-                keyAlias "IQB_STUDENT"
+                keyAlias ""
                 keyPassword "123456"
             }
         }
