@@ -1,4 +1,4 @@
-#### **IQB_Student_App 简介：**
+#### **FrameCode 简介：**
 
 #### **注意：**
 model_app目前是个空的Mock的业务module,开发人员根据model_app 复制出自己的业务module,并在壳子工程（model_app）的settings.gradle/app->build.gradle 文件中以及gradle.properties中加入对应的业务模块的编译配置；
